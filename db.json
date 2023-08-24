@@ -1,0 +1,30 @@
+{
+    "listings": [
+      {
+        "listingId": 1,
+        "userId": 1,
+        "title": "Cozy Apartment",
+        "description": "A nice place to stay",
+        "location": "New York",
+        "price": 100,
+        "availabilityStartDate": "2023-09-01",
+        "availabilityEndDate": "2023-12-31",
+        "featuredPhotoURL": "https://example.com/photo1.jpg"
+      }
+    ],
+    "listingPhotos": [
+      {
+        "photoId": 1,
+        "listingId": 1,
+        "photoURL": "https://example.com/photo1.jpg",
+        "isFeatured": true
+      }
+    ],
+    "users": [
+      {
+        "userId": 1,
+        "username": "will_shepp"
+      }
+    ]
+  }
+  
