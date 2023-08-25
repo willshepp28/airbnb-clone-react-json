@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "concurrently \"yarn vite\" \"yarn json-server\"",
+    "build": "vite build && cp db.json build/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "json-server": "json-server --watch db.json --port 5000"
   },
   "dependencies": {
     "bootstrap": "^5.3.1",
@@ -19,10 +20,14 @@
     "@types/react": "^18.2.15",
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
+    "concurrently": "^8.2.1",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
+    "http-proxy-middleware": "^2.0.6",
+    "json-server": "^0.17.3",
+    "netlify-lambda": "^2.0.16",
     "vite": "^4.4.5"
   }
 }
