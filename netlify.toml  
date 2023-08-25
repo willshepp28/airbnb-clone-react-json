@@ -1,0 +1,9 @@
+[build]
+  command = "yarn build"
+  functions = "netlify/functions" # the folder where jsonServer.js is located
+  publish = "build"
+  
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/jsonServer/:splat"
+  status = 200
