@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"yarn vite\" \"yarn json-server\"",
-    "build": "vite build && cp db.json build/",
+    "build": "vite build && cp db.json dist/",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "json-server": "json-server --watch db.json --port 5000"
